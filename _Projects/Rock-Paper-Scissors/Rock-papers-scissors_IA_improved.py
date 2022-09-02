@@ -8,7 +8,7 @@ computer_wins = 0
 
 
 ## Initialize a random integer from 0 to 2
-rand = randint(0,2)
+
 
 times = int(input('How many times do you want to play?: '))
 
@@ -20,6 +20,8 @@ while computer_wins < times and player_wins < times:
     print("...scissors...")
     ## You inputs your choice 
     player = input('\nWrite your choice: ').lower()
+    
+    rand = randint(0,2)
     
     if rand == 0:
         computer = 'rock'
