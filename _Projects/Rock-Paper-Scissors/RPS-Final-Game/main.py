@@ -1,6 +1,6 @@
 ## In this code you play against the computer ROCK PAPER SCISSORS!!!
 
-from funtion_RPS import *
+from functions import *
 
 times = int(input('How many times do you want to play?: '))
 
