@@ -1,27 +1,32 @@
 import pandas as pd
+import numpy as np
 import time
 
 
-def generate_csv(selection, current, worst_case, worst_case_50us):
+
+def generate_csv_file():
+
+        df = pd.DataFrame(data =[["", "", "",""],
+                                 ["", "", "",""],
+                                 ["", "", "",""]],
+                        index=['KNO', 'UFR', 'LFR'],
+                        columns=['TLA','Current CPU Usage (%)', 
+                                'Worst-case CPU Usage (%)', 
+                                'Worst-case 50us task (%)'])
+        df.to_csv(r"log\cpu_usage.csv", mode = 'w', index = True)
+        return df
+
+
+def add_csv_data(df, selection, current, worst_case, worst_case_50us):
     
-    FORMAT = 'w'
-
     tla_dic = {0: 'KNO', 1: 'UFR', 2: 'LFR'}
-
-    df = pd.DataFrame(data =  [["", "", ""],
-                               ["", "", ""],
-                               ["", "", ""]],
-                      index=['KNO', 'UFR', 'LFR'],
-                      columns=['Current CPU Usage (%)', 
-                               'Worst-case CPU Usage (%)', 
-                               'Worst-case 50us task (%)'])
-
     df.loc[[tla_dic[selection]],['Current CPU Usage (%)']] = current
     df.loc[[tla_dic[selection]],['Worst-case CPU Usage (%)']] = worst_case
     df.loc[[tla_dic[selection]],['Worst-case 50us task (%)']] = worst_case_50us
 
-    df.to_csv(r"log\cpu_usage.csv", mode = FORMAT, index = True)
+    df.to_csv(r"log\cpu_usage.csv", mode = 'w', index = True)
 
-for i in range(3):
-    generate_csv(i,1,1,1)
-    time.sleep(1)
+    
+df = generate_csv_file()
+
+add_csv_data(df,2,1,3,4)
