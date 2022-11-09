@@ -6,11 +6,11 @@ import time
 
 def generate_csv_file():
 
-        df = pd.DataFrame(data =[["", "", "",""],
-                                 ["", "", "",""],
-                                 ["", "", "",""]],
+        df = pd.DataFrame(data =[["", "", ""],
+                                 ["", "", ""],
+                                 ["", "", ""]],
                         index=['KNO', 'UFR', 'LFR'],
-                        columns=['TLA','Current CPU Usage (%)', 
+                        columns=['Current CPU Usage (%)', 
                                 'Worst-case CPU Usage (%)', 
                                 'Worst-case 50us task (%)'])
         df.to_csv(r"log\cpu_usage.csv", mode = 'w', index = True)
