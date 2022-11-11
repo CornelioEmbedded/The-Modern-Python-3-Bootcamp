@@ -20,3 +20,13 @@
 
 
 
+def sum_even_values(*args):
+    
+    lista_suma = []
+    for i in args:
+        if (i % 2 == 0):
+            lista_suma.append(i)
+        else:
+            print(0)
+
+sum_even_values(1,2,3,4)
