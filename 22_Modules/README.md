@@ -56,3 +56,10 @@ def other_fn():
  ```
  pip instal <external_module>
  ```
+
+ ## The `__name__` variable
+
+ Every module, has its own `__name__` variable, if the file is the main file being run, its value is `__main__`
+
+ if we are running a script, ``__name__`` will be equal to ``__main__``, but if we run in an extern file, it will be equal to the name file.
+
