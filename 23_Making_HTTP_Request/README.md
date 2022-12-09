@@ -1,3 +1,14 @@
+# 23 - Making HTTP Request
+
+## HTTP Crash Course
+
+To resume:
+- Click in the link
+- URL turns into IP Address
+- The client computer makes a request to the IP Address with aditional information
+- The server processes the request
+- Sends back to the client
+
 ## HTTP Verbs
 
 Exists two request types:
