@@ -71,4 +71,36 @@ class User:
 ```
 
 ## Class Attributes
-We can also define attributes directly on a class that are shared by all instances of a class and the class itself
+We can also define attributes directly on a class that are shared by all instances of a class and the class itself.
+
+```python
+class Pet:
+    allowed = ['cat', 'dog', 'fish', 'rat']  ## Class attribute
+    def __init__(self, name, species):
+        if species not in self.allowed:
+            raise ValueError(f'You can have a {species} as a pet!')
+        self.name = name
+        self.species = species
+    
+    def set_species(self, species):
+        if species not in self.allowed:
+            raise ValueError(f'You can have a {species} as a pet!')
+        self.species = species
+```
+
+## Class Methods
+Class methods are methods (with the @classmethod decorator) that are not concerned with instances, but the class itself.
+
+```python
+    @classmethod
+    def display_active_users(cls):
+        return f'There are {cls.active_users} active users'
+    
+    @classmethod
+    def from_string(cls, data):
+        first, last, age = data.split(',')
+        return cls(first, last, int(age))
+```
+
+## String Representation Example
+The '__repr__' method is one of several ways to provide a nicer string representation.
