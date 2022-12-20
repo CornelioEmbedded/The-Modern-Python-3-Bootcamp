@@ -94,4 +94,17 @@ You can programmatically reference the MRO three ways:
 - use the mro() method on the class
 - use the builtin help(cls) method
 
+## Polymorphism
+An object can take on many forms.
+- The same class method works in a similar way for different classes.
+- The same operation works for different kinds of objects.
+
+
+## Special `__magic__` methods
+If we want to add more functions into classes, we can use magic methods. It let us to use len(Class), add and substract in classes.
+
 ```python
+def __repr__(self):
+    return 'Hi, I`m a magic method '
+```
+
