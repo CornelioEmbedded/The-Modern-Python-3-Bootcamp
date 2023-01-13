@@ -44,9 +44,10 @@ class Deck:
 
 
 
-d = Deck()
-d.shuffle()
-card = d.deal_card()
-print(card)
-hand = d.deal_hand(12)
-print(hand)
+# d = Deck()
+# print(f'CARTAS: {d.cards}')
+# d.shuffle()
+# card = d.deal_card()
+# print(card)
+# hand = d.deal_hand(12)
+# print(hand)
