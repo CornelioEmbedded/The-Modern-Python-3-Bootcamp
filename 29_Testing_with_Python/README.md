@@ -92,4 +92,18 @@ def eat(food, is_healthy):
     return f'I´m eating {food}, {ending}'
 ```
 
-This code will test the function eat from activities.py
+## Types of Assertions
+- `self.assertEqual()`
+- `self.assertNotEqual()`
+- `self.assertTrue()`
+- `self.assertFalse()`
+- `self.assertIsNone()`
+- `self.assertIsNotNone()`
+- `self.assertIn()`
+- `self.assertNotIn()`
+
+## setUp and tearDown
+- For larger applications, you may want similar application state before running tests.
+- setUp runs before each test method
+- tearDown runs after each test method
+- Common use cases: adding/removing data from a test database, creating instances of a class
