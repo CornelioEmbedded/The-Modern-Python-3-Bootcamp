@@ -42,3 +42,21 @@ d = soup.find()
     - Select children: div > p
     - Select descendents: div p
 
+## Accesing Data in Elements
+- `get_text`: access the inner text in an element
+- `mame`: tag name
+- `attrs`: dictionary of attributes
+- You can also access attribute values using brackets
+
+## Navigating with Beutiful Soup
+- Via tags
+  - `parent/parents`
+  - `contents`
+  - `next_sibling/next_siblings`
+  - `previous_sibling/previos_siblings`
+- Via Searching
+  - `find_parent/find_parents`
+  - `find_next_sibling/find_next_siblings`
+
+
+
