@@ -26,3 +26,24 @@
 - `^`: Start of string or line
 - `$`: End of string or line
 - `\b`: Word boundary
+
+## Regular Expressions in Python
+
+```python
+import re
+pattern = re.compile(r'\d{3}-\d{4}')
+match = pattern.search(123-1234)
+print(match.group)
+```
+
+```python
+import re
+
+def extract_phone(input):
+  phone_regex = re.compile(r'\b\d{3} \d{3}-\d{4}\b')
+  match = phone_regex.search(input)
+  if match:
+    return match.group()
+  return None
+ ```
+ 
